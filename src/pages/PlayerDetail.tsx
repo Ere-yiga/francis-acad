@@ -64,8 +64,8 @@ export default function PlayerDetail() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-        <table className="w-full text-left">
+      <div className="bg-white rounded-lg shadow-sm overflow-x-auto">
+  <table className="w-full text-left min-w-[600px]">
           <thead className="bg-slate-100 text-slate-600 text-sm">
             <tr>
               <th className="px-4 py-3">Date</th>
