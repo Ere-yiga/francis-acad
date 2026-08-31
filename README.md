@@ -25,10 +25,6 @@ Nigerian youth football academies often manage players, schedules, and parent co
 | Planned Backend | Supabase (PostgreSQL, Auth, Storage) |
 | Deployment | Vercel |
 
-## Project Status
-
-This version of the project is a **frontend-first prototype**. All data shown is mock data used to demonstrate the interface and user flow. The next phase involves connecting the app to a live Supabase backend for real data persistence, authentication (Admin/Coach vs. Parent roles), and file storage.
-
 ## Getting Started
 
 ```bash
@@ -41,13 +37,3 @@ npm run dev
 
 The app will be available at `http://localhost:5173`.
 
-## Future Work
-
-- Integrate Supabase for authentication, database, and storage.
-- Add real-time or notification-based parent communication.
-- Add performance analytics/visualizations for player stats.
-- Support recurring training schedules and calendar sync.
-
-## Author
-
-Built by Francis as a final year project.
