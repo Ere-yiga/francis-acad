@@ -1,8 +1,11 @@
 import { useState, type FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { initialPlayers, type Player } from '../data/players';
-
 export default function Players() {
   const [players, setPlayers] = useState<Player[]>(initialPlayers);
+
+  const navigate = useNavigate();
+
   const [showForm, setShowForm] = useState(false);
   const [error, setError] = useState('');
 
@@ -195,7 +198,11 @@ export default function Players() {
           </thead>
           <tbody>
             {players.map((player) => (
-              <tr key={player.id} className="border-t border-slate-100 hover:bg-slate-50">
+              <tr
+  key={player.id}
+  onClick={() => navigate(`/players/${player.id}`)}
+  className="border-t border-slate-100 hover:bg-slate-50 cursor-pointer"
+>
                 <td className="px-4 py-3 font-medium text-slate-800">{player.fullName}</td>
                 <td className="px-4 py-3 text-slate-600">{player.age}</td>
                 <td className="px-4 py-3 text-slate-600">{player.position}</td>
