@@ -1,75 +1,53 @@
-# React + TypeScript + Vite
+# Francis Academy Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based platform for managing football academies in Nigeria — built as a final year project. It helps academies handle player registrations, track performance stats, schedule training sessions, and communicate with parents, all from a single dashboard.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Nigerian youth football academies often manage players, schedules, and parent communication manually — through spreadsheets, phone calls, or paper records. This project explores a simple, practical alternative: a centralized web app tailored to how these academies actually operate.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Player Registration** — Add, view, and manage player profiles and personal details.
+- **Performance Tracking** — Record and view stats such as goals, assists, and attendance per player.
+- **Training Schedule** — View and manage upcoming training sessions, including date, time, and location.
+- **Parent Communication** — A simple announcements feed where coaches can post updates for parents to view.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Layer | Technology |
+|---|---|
+| Frontend | React (TypeScript) |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| Routing | React Router |
+| Data (current build) | Mock/local data |
+| Planned Backend | Supabase (PostgreSQL, Auth, Storage) |
+| Deployment | Vercel |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Status
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This version of the project is a **frontend-first prototype**. All data shown is mock data used to demonstrate the interface and user flow. The next phase involves connecting the app to a live Supabase backend for real data persistence, authentication (Admin/Coach vs. Parent roles), and file storage.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
 
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+The app will be available at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Future Work
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Integrate Supabase for authentication, database, and storage.
+- Add real-time or notification-based parent communication.
+- Add performance analytics/visualizations for player stats.
+- Support recurring training schedules and calendar sync.
 
-```
+## Author
+
+Built by Francis as a final year project.
