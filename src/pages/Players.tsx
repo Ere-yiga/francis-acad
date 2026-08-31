@@ -200,7 +200,7 @@ export default function Players() {
             {players.map((player) => (
               <tr
   key={player.id}
-  onClick={() => navigate(`/players/${player.id}`)}
+  onClick={() => navigate(`/app/players/${player.id}`)}
   className="border-t border-slate-100 hover:bg-slate-50 cursor-pointer"
 >
                 <td className="px-4 py-3 font-medium text-slate-800">{player.fullName}</td>
